@@ -1,0 +1,182 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Square Pattern</h1>
+		<p id="square"></p>
+		<h1>Hollow Square Pattern</h1>
+		<p id="hollow"></p>
+		<h1>Right Triangle Pattern</h1>
+		<p id="right_triangle"></p>
+		<h1>Left Triangle Pattern</h1>
+		<p id="left_triangle"></p>
+		<h1>Downward Triangle Pattern</h1>
+		<p id="down_triangle"></p>
+		<h1>Hollow Triangle Pattern</h1>
+		<p id="hollow_triangle"></p>
+		<h1>Pyramid Pattern</h1>
+		<p id="pyramid"></p>
+		<h1> Reverse Pyramid Pattern</h1>
+		<p id="r_pyramid"></p>
+		<h1>Hollow Pyramid Pattern</h1>
+		<p id="h_pyramid"></p>
+		<h1>Diamond Pattern</h1>
+		<p id="diamond"></p>
+		
+		<script>
+			var square ='';
+			for(var i = 0; i <=5; i++){
+				for(var j = 0; j < 5; j++){
+					square += '*';
+				}
+				square += '<br>';
+			}
+			document.getElementById('square').innerHTML = square;
+			<!-- Square pattern end -->
+			
+			<!-- Hollow Square Patter Start -->
+				var hollow = '';
+				for(var i =0; i <=5; i++){
+					for(var j = 0; j <=5; j++){
+						<!-- condition of rows & Columns -->
+						if(i === 0 || i === 5 || j === 0 || j === 5){
+							hollow += '*';
+						}
+						else{
+							hollow += '&nbsp;&nbsp;';
+						}
+					}
+					hollow += '<br>';
+				}
+				document.getElementById('hollow').innerHTML = hollow;
+			<!-- Hollow Square Patter end -->
+			<!-- Right Traingle Pattern start -->
+			var triangle = '';
+			for(var i = 1; i <= 5; i++){
+			
+				for(var k = 0; k < 5-i ; k++){
+					triangle += '&nbsp;&nbsp;';
+				}
+				for(var j = 0; j < i; j++){
+					triangle += '*';
+				}
+				triangle += '<br>';
+			}
+			document.getElementById('right_triangle').innerHTML = triangle;
+			<!-- Right Traingle Pattern end -->
+			<!-- Left Triangle Pattern Start -->
+			var left = '';
+			for(var i = 0; i <= 5; i++){
+				for(var j =0; j <= i; j++){
+					left += '*';
+				}
+				left += '<br>';
+			}
+			document.getElementById('left_triangle').innerHTML = left;
+			<!-- Left Triangle Pattern end -->
+			<!-- Downward Traingle Pattern Start -->
+			var down = '';
+			for(var i = 0; i <= 5; i++){
+				for(var j = 5; j >= i; j--){
+					down += '*';
+				}
+				down += '<br>';
+			}
+			document.getElementById('down_triangle').innerHTML = down;
+			<!-- Downward Traingle Pattern end -->
+			<!-- Hollow Traingle Pattern start -->
+			var hollow_t = '';
+			for(var i = 1; i <=6; i++){
+				for(var j = 0; j < i; j++){
+					if(i === 6){
+						hollow_t += '*';
+					}
+					else{
+						if(j === 0 || j === i - 1){
+							hollow_t += '*';
+						}
+						else{
+							hollow_t += '&nbsp;&nbsp;';
+						}
+					}
+				}
+				hollow_t += '<br>';
+			}
+			document.getElementById('hollow_triangle').innerHTML = hollow_t;
+			<!-- Hollow Traingle Pattern end -->
+			<!-- Pyramid Pattern start -->
+			var pyramid = '';
+			for(var  i = 0; i <= 5; i++){
+				for(var  k = 5; k > i; k--){
+					pyramid += '&nbsp;';
+				}
+				for(var j = 0; j < i; j++){
+					pyramid += '*';
+				}
+				pyramid += '<br>';
+			}
+			document.getElementById('pyramid').innerHTML = pyramid;
+			<!-- Pyramid Pattern end -->
+			<!-- Reversed Pyramid Pattern start -->
+			var r_pyramid = '';
+			for(var  i = 0; i <= 5; i++){
+				for(var k = 0; k < i; k++){
+					r_pyramid += '&nbsp;';
+				}
+				for(var j = 5; j > i; j--){
+					r_pyramid += '*';
+				}
+				r_pyramid += '<br>';
+			}
+			document.getElementById('r_pyramid').innerHTML = r_pyramid;
+			<!-- Reversed Pyramid Pattern end -->
+			<!-- Hollow Pyramid Pattern start -->
+			var h_pyramid = '';
+			for(var i = 0; i <= 5; i++){
+				for(var k = 5; k > i; k--){
+					h_pyramid += '&nbsp;';
+				}
+				for(var j = 0; j < i; j++){
+					if(i === 5){
+						h_pyramid += '*';
+					}
+					else{
+						if(j === 0 || j === i - 1){
+							h_pyramid += '*';
+						}
+						else{
+							h_pyramid += '&nbsp;&nbsp;';
+						}
+					}
+				}
+				h_pyramid += '<br>';
+			}
+			document.getElementById('h_pyramid').innerHTML = h_pyramid;
+			<!-- Hollow Pyramid Pattern end -->
+			<!-- Diamond Pattern Start -->
+			var diamond = '';
+			<!-- upside Pyramid -->
+			for(var i = 0; i <= 6; i++){
+				for(var k = 7; k > i; k--){
+					diamond += '&nbsp;';
+				}
+				for(var j = 0; j < i; j++){
+					diamond += '*';
+				}
+				diamond += '<br>';
+			}
+			<!-- downside pyramid -->
+			for(var i = 0; i <= 6; i++){
+				for(var k = 0; k < i; k++){
+					diamond += '&nbsp;';
+				}
+				for(var j = 7; j > i; j--){
+					diamond += '*';
+				}
+				diamond += '<br>';
+			}
+			document.getElementById('diamond').innerHTML = diamond;
+			<!-- Diamond Pattern End -->
+		</script>
+	</body>
+</html>
